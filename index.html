@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en-US">
+	<head>
+		<meta charset="utf-8">
+		<meta name="author" content="Zachary Arterburn"> 
+		<title>Practice Website</title>
+		<script>
+			function changeGreeting(){
+				var name = document.getElementById("input1").value;
+				document.getElementById("greating").innerHTML = "Hello " +name;
+				document.getElementById("paragraph1").style.display = "block";
+				document.getElementById("input1").style.display = "none"
+				document.getElementById("button1").style.display = "none"; 
+				document.getElementById("button2").style.display = "block"; 
+			}
+			function resetButton(){
+				document.getElementById("myForm").reset();
+				document.getElementById("greating").innerHTML = "Hello" ;
+				document.getElementById("paragraph1").style.display = "none";
+				document.getElementById("input1").style.display = "block"
+				document.getElementById("button2").style.display = "none";
+				document.getElementById("button1").style.display = "block"; 
+			}
+		</script>
+	</head>
+	<body>
+		<form id="myForm">
+			<h1 id="greating">Hello </h1>
+			<p style="display:none" id="paragraph1">Lovely wether we are haveing to day</p>
+			<input type="text" size="20" id="input1" style="display:block" value="enter your name">
+			<button type="button" id="button1" onclick="changeGreeting()" style="display:block">I'm a button</button>
+			<button type="button" id="button2" onclick="resetButton()" style="display:none">Reset</button>
+	 	</form>
+	</body>
+</html>		
